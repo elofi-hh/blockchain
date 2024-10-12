@@ -40,6 +40,7 @@ contract UserRanking {
         }
 
         emit RankingUpdated(userId, rankings[userId]);
+        uint8 test = 20;
     }
         
 }
