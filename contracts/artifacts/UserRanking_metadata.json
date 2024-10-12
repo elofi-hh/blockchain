@@ -1,0 +1,185 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "userId",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint8",
+						"name": "rank",
+						"type": "uint8"
+					}
+				],
+				"name": "RankingUpdated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "userId",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "count",
+						"type": "uint8"
+					}
+				],
+				"name": "decrement",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "userId",
+						"type": "string"
+					}
+				],
+				"name": "getRanking",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "userId",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "count",
+						"type": "uint8"
+					}
+				],
+				"name": "increment",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "rankings",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "userId",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "rank",
+						"type": "uint8"
+					}
+				],
+				"name": "setRanking",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "userId",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "networkEloRating",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "networkStrictnessRating",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bool",
+						"name": "isAbuser",
+						"type": "bool"
+					}
+				],
+				"name": "updateRanking",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/userranking.sol": "UserRanking"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/userranking.sol": {
+			"keccak256": "0x6592928dc8a4ddc283bbfdc58b056bca94e0bb3f02ff1c20095d6db09be866bc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://76d5e28a011bc5ec9f903a6beac8da406058022a29726a494e47d1245bd43629",
+				"dweb:/ipfs/QmUu4a34XV23Dkvxr2i1DHhAAUxwiPfNeNrJ9YZJYeJiW5"
+			]
+		}
+	},
+	"version": 1
+}
