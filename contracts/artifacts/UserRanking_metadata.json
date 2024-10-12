@@ -6,6 +6,30 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "uint16",
+						"name": "initialKFactor",
+						"type": "uint16"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint16",
+						"name": "newKFactor",
+						"type": "uint16"
+					}
+				],
+				"name": "KFactorUpdated",
+				"type": "event"
+			},
+			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -16,30 +40,25 @@
 					},
 					{
 						"indexed": false,
-						"internalType": "uint8",
+						"internalType": "uint16",
 						"name": "rank",
-						"type": "uint8"
+						"type": "uint16"
 					}
 				],
 				"name": "RankingUpdated",
 				"type": "event"
 			},
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "K_FACTOR",
+				"outputs": [
 					{
-						"internalType": "string",
-						"name": "userId",
-						"type": "string"
-					},
-					{
-						"internalType": "uint8",
-						"name": "count",
-						"type": "uint8"
+						"internalType": "uint16",
+						"name": "",
+						"type": "uint16"
 					}
 				],
-				"name": "decrement",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -53,30 +72,12 @@
 				"name": "getRanking",
 				"outputs": [
 					{
-						"internalType": "uint8",
+						"internalType": "uint16",
 						"name": "",
-						"type": "uint8"
+						"type": "uint16"
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "userId",
-						"type": "string"
-					},
-					{
-						"internalType": "uint8",
-						"name": "count",
-						"type": "uint8"
-					}
-				],
-				"name": "increment",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -90,12 +91,25 @@
 				"name": "rankings",
 				"outputs": [
 					{
-						"internalType": "uint8",
+						"internalType": "uint16",
 						"name": "",
-						"type": "uint8"
+						"type": "uint16"
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint16",
+						"name": "newKFactor",
+						"type": "uint16"
+					}
+				],
+				"name": "setKFactor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -106,9 +120,9 @@
 						"type": "string"
 					},
 					{
-						"internalType": "uint8",
+						"internalType": "uint16",
 						"name": "rank",
-						"type": "uint8"
+						"type": "uint16"
 					}
 				],
 				"name": "setRanking",
@@ -124,14 +138,9 @@
 						"type": "string"
 					},
 					{
-						"internalType": "uint8",
+						"internalType": "uint16",
 						"name": "networkEloRating",
-						"type": "uint8"
-					},
-					{
-						"internalType": "uint8",
-						"name": "networkStrictnessRating",
-						"type": "uint8"
+						"type": "uint16"
 					},
 					{
 						"internalType": "bool",
@@ -160,7 +169,7 @@
 		"compilationTarget": {
 			"contracts/userranking.sol": "UserRanking"
 		},
-		"evmVersion": "london",
+		"evmVersion": "cancun",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -172,12 +181,20 @@
 		"remappings": []
 	},
 	"sources": {
+		"abdk-libraries-solidity/ABDKMath64x64.sol": {
+			"keccak256": "0x1364fdc24192b982f647c7fc68dcb2f6fc1b5e201843e773144bd23a76cb3b97",
+			"license": "BSD-4-Clause",
+			"urls": [
+				"bzz-raw://490712cc07db32f274899b17aade9c975f06010848c21500b8a5ead6898e09c7",
+				"dweb:/ipfs/QmZMPKjDgwCFSGdLWJW6g5E7hDLByA9hNjXzAwJ4GKTZvN"
+			]
+		},
 		"contracts/userranking.sol": {
-			"keccak256": "0x78ffd5c9cb75966faa021e4c97e14440c27e2d5d2dc69cac6396d71e5530b45b",
+			"keccak256": "0x411250928ccd439d32bcec56bc1c05992b09ae610a250e48bb93373c70bcb66c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f62f40de64596f88b795659c25f8d863454e60fd722bf1c30c3e943843230b67",
-				"dweb:/ipfs/QmczxzxCXv6JcsQinAz19y8eBZ46dyhPn89SbB3GASopw5"
+				"bzz-raw://ad46f8449bebe26466f6251b01288506b8462a01b5a42dba502c9c5e04827d54",
+				"dweb:/ipfs/QmXAxtuPjH5L2KkHSCuuR1fLo9kvheQrWDb51qqNAyZhPo"
 			]
 		}
 	},
